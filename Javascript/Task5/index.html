@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <div id="details"></div>
+</body>
+<script>
+	fetch('person.json')
+        .then((response) =>{ return response.json()})
+        .then((obj) => { readData(obj) })
+	function readData(data){
+            let details = document.getElementById('details')
+            for(const persons of data){
+                let person = document.createElement('div');
+                person.innerHTML = `<p>Name: ${persons.Name}</p><br>
+                                    <p>Age: ${persons.Age}</p><br>
+                                    <p>Place: ${persons.Place}</p><br>
+                                    <p>DOB : ${persons.DOB}</p><br>`
+                details.appendChild(person)
+            }
+        }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <h1>EMI Calculator</h1>
+    <input type="text" id="loanamount" placeholder="Amount"><br>
+    <input type="text" id="interestrate" placeholder="Interest"><br>
+    <input type="text" id="loantenure" placeholder="Tenure"><br>
+    <label id="emi"></label><br>
+    <button onclick="emiCalculator()">CALCULATE EMI</button>
+</body>
+<script>
+    function emiCalculator(){
+        const loanAmount = parseFloat(document.getElementById("loanamount").value)
+        const interestRate = parseFloat(document.getElementById("interestrate").value)
+        const loanTenure = parseFloat(document.getElementById("loantenure").value)
+        const tenureMonths = loanTenure * 12;
+        if( !loanAmount || !interestRate || !loanTenure){
+            alert("INVALID INPUT");
+        }
+        
+        const monthlyRate = interestRate / 12;
+        const emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) / (Math.pow(1 + monthlyRate, tenureMonths) - 1);
+
+        document.getElementById('emi').textContent = `EMI: ${emi.toFixed(2)}`;
+    }
+</script>
+</html>

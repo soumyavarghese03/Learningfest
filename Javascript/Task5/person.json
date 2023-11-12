@@ -1,0 +1,49 @@
+[
+  {
+    "Name": "Alice",
+    "Age": 25,
+    "Place": "New York",
+    "DOB": "1998-03-12"
+  },
+  { "Name": "Bob",
+    "Age": 32,
+    "Place": "Los Angeles",
+    "DOB": "1991-07-19"
+  },
+  {
+    "Name": "Charlie",
+    "Age": 41,
+    "Place": "Chicago",
+    "DOB": "1982-11-03"
+  },
+  {
+    "Name": "David",
+    "Age": 18,
+    "Place": "Houston",
+    "DOB": "2005-05-08"
+  },
+  {
+    "Name": "Emily",
+    "Age": 29,
+    "Place": "San Francisco",
+    "DOB": "1994-09-26"
+  },
+  {
+    "Name": "Frank",
+    "Age": 36,
+    "Place": "Boston",
+    "DOB": "1987-12-30"
+  },
+  {
+    "Name": "Grace",
+    "Age": 22,
+    "Place": "Miami",
+    "DOB": "2001-01-14"
+  },
+  {
+    "Name": "Harry",
+    "Age": 47,
+    "Place": "Seattle",
+    "DOB": "1976-06-21"
+  }
+]
