@@ -5,9 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 5</title>
 </head>
-<body>
+<style>
+ body
+    
+    {
+        background: rgb(50, 10, 10);
+    }
+    #details{
+        color: white;
+        text-align: center;
+        font-size: large;
+    }
+    h1{
+        color: rgb(63, 110, 171);
+        text-align: center;
+    }
+    </style>
+    
+    <body>
+     <div id="details">
+        <h1> DATA IN JSON FILE</h1>
+    </div>
+    <div id="myData"></div>
+  <script type="text/javascript" src="fetch('person.json')"></script>
+    </body>
+<script>
+	fetch('person.json')
+        .then((response) =>{ return response.json()})
+        .then((obj) => { readData(obj) })
+	function readData(data){
+            let details = document.getElementById('details')
+            for(const persons of data){
+                let person = document.createElement('div');
+                person.innerHTML = `<p>Name: ${persons.Name}</p><br>
+                                    <p>Age: ${persons.Age}</p><br>
+                                    <p>Place: ${persons.Place}</p><br>
+                                    <p>DOB : ${persons.DOB}</p><br>`
+                details.appendChild(person)
+            }
+        }
+</script>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<style>
+ body
+    
+    {
+        background: rgb(50, 10, 10);
+    }
+    #details{
+        color: white;
+        text-align: center;
+        font-size: large;
+    }
+    h1{
+        color: rgb(63, 110, 171);
+        text-align: center;
+    }
+    </style>
+    
+    <body>
+     <div id="details">
+        <h1> DATA IN JSON FILE</h1>
+    </div>
     <div id="details"></div>
-</body>
+  <script type="text/javascript" src="fetch('person.json')"></script>
+    </body>
 <script>
 	fetch('person.json')
         .then((response) =>{ return response.json()})
